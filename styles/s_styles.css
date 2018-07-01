@@ -21,6 +21,9 @@
     margin: auto 15vw;
 }
 @media(max-width:768px){
+    .content{
+        margin-top: 10vw;
+    }
     .font{
         font-size: 3vw;
     }
