@@ -18,20 +18,14 @@ body .links{
     padding-top: 8vw;
 }
 .item{
-    display: block;
-    box-sizing: border-box;
     margin: 1vw;
     padding: 1vw;
-    width:20vw; 
-    height: 28.5vw;
 }
 .item1{
     display: block;
     box-sizing: border-box;
     margin: 1vw;
     padding: 1vw;
-    width:20vw; 
-    height: 25vw;
 }
 .image{
     width: 10%;
