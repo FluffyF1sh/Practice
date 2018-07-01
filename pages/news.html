@@ -3,193 +3,387 @@
 
 <head>
     <meta charset="utf-8">
-    <title>News</title>
     <meta name="description" content="West-Tek">
+    <title>Power Armor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../styles/n_styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/s_styles.css" />
     <link href="../assets/icon.png" rel="shortcut icon" type="image/png">
 </head>
 
-<body class="grid_container">
-    <div class="header grid_item">
-        <div class="header_style">
-            <img src="../assets/hlogo.png">
-            <div class="zagolovok">
-                <a style="text-decoration: none; color: green;" href="../index.html">West-Tek power armor</a>
-            </div>
-            <div class="search">Поиск
-                <input type="search" name="search-bar">
-                <input type="submit" name="submit" value=" ">
-            </div>
-            <div class="cart_button">Корзина</div>
-        </div>
-        <div class="hlow_style">
-            <div class="header_button">
-                <a style="text-decoration: none; color: green;" href="../index.html">Магазин</a>
-            </div>
-            <div class="header_button">
-                <a style="text-decoration: none; color: green;" href="about.html">О компании</a>
-            </div>
-            <div class="header_button">
-                <a style="text-decoration: none; color: green;" href="https://mamaikan.github.io/Nuka-Cola/index.html">Nuka-Cola</a>
+<body class="back">
+    <nav class="shadow row fixed-top hs navbar navbar-expand-lg navbar-light bg-light">
+        <div class="col d-flex flex-row justify-content-start align-items-center">
+            <img class="navbar-brand w-25" src="../assets/hlogo.png">
+            <div>
+                <a class="pl-1-md links font-weight-bold font-italic font-header" href="../index.html">West-Tek power armor</a>
             </div>
         </div>
-    </div>
-    <div class="content_box">
-        <div class="exclude"></div>
-        <div class="include">
-            <h2 class="news_title">Требуются сотрудники!</h2>
-            <div class="news_include">
-                <div class="article">
-                    <img src="../assets/news1.png">
-                    <div>
-                        <h3>Джеймс Кэмерон. Глава отдела новостей 08.12.2024</h3>
-                        <p>
-                            В нашем штате сотрудников недосчёт кадров. Мы набираем новый состав рабочих. Принимаются роботы: протектрон, мистер-помощник
-                            (любой серии), мистер-храбрец, робоглаз, робомозг. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor.
-                            Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur ex porttitor
-                            id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia risus.
-                            Suspendisse tempus lectus at augue ultrices, a molestie diam vehicula.
-                        </p>
-                    </div>
-                </div>
-                <div class="news_bottom">
+        <div class="col d-flex flex-row justify-content-center align-items-center ">
+            <form class="form-inline my-auto my-lg-0 d-none d-md-block">
+                <input class="form-control mr-sm-2" type="search" placeholder="Введите ваш запрос" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+            </form>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="col justify-content-end navbar-nav">
+                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
+                    href="../index.html">Магазин</a>
+
+                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link active" role="button" aria-pressed="true"
+                    href="news.html">Новости
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
+                    href="about.html">О компании</a>
+                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
+                    href="https://mamaikan.github.io/Nuka-Cola/index.html">Nuka-Cola</a>
+                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-danger  btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
+                    href=".html">Корзина</a>
+            </div>
+        </div>
+    </nav>
+    <div class="content container-fluid font ">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md-8">
+                <h2 class="text-center bg-dark font-weight-bold">Требуются сотрудники!</h2>
+
+                <img class="mw-100 float-left mr-4 mb-2" src="../assets/news1.png">
+
+                <h3>Джеймс Кэмерон. Глава отдела новостей 08.12.2024</h3>
+
+                <p class="text-justify">
+                    В нашем штате сотрудников недосчёт кадров. Мы набираем новый состав рабочих. Принимаются роботы: протектрон, мистер-помощник
+                    (любой серии), мистер-храбрец, робоглаз, робомозг. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor. Donec
+                    a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam
+                    sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse tempus
+                    lectus at augue ultrices, a molestie diam vehicula.
+                </p>
+            </div>
+            <div class="col-md"></div>
+        </div>
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col col-md-8">
+                <p class="text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie
                     ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur
                     ex porttitor id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia
                     risus. Suspendisse tempus mole vehicula. Прошу, только не заменяйте меня на новострона!
-                    <div class="news_comments">
-                        <form>
-                            <div>Ваше имя:
-                                <input type="text" placeholder="Ваше имя">
+                    <form class="border border-dark p-3 ">
+                        <div class="container-fluid">
+                            <div class="row m-1">
+                                <div class="col m-1 ">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют! Жду, когда смогу отдать своего протекрона на работу
+                                    к вам.
+                                </div>
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+                                </div>
                             </div>
-                            <div>Ваш e-mail:
-                                <input type="email" placeholder="Ваш Email">
+                            <div class="row m-1">
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
                             </div>
-                            <div>Комментарий:
-                                <textarea placeholder="Ваше сообщение"></textarea>
+                            <div class="row m-1">
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
                             </div>
-                            <div>
-                                <input type="submit" value="отправить">
+                        </div>
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <input type="email" class="form-control" id="colFormLabel" placeholder="example@mailbox.dom" required>
                             </div>
-                        </form>
-                    </div>
-                </div>
+                            <div class="col form-group">
+                                <input type="username" class="form-control" id="colFormLabel" placeholder="username" required>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col">
+                                <textarea class="form-control" placeholder="Комментарий"></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-group text-center">
+                            <div class="col">
+                                <input type="submit" value="Отправить" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </p>
             </div>
-            <h2 class="news_title">Новый экзоскелет!</h2>
-            <div class="news_include">
-                <div class="article">
-                    <img src="../assets/news2.png">
-                    <div>
-                        <h3>Новострон 17.02.2043</h3>
-                        <p>
-                            Данный экзоскелет является моделью нового поколения, котрорая обходит предыдущую модель в несколько раз! Сидит на человеке
-                            среднего телосложения как влитой. С помощью новейших технологий, вес экзоскелета не ощущается
-                            практически на 99.67%. Даже нося этот костюм без брони, вы гарантируете себе защиту от пуль до
-                            пятидесятого калибра. Данный экзоскелет работает на ядерных блоках, что в свою очередь может
-                            нанести вред вашему здоровью. Проконсультируйтесь с Мистером-врачом, перед тем, как приобретать
-                            данную продукцию компании West-Tek за 3499$! Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor.
-                            Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur ex porttitor
-                            id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia risus.
-                            Suspendisse tempus lectus at augue ultrices, a molestie diam vehicula.
-                        </p>
-                    </div>
-                </div>
-                <div class="news_bottom">
+            <div class="col-md"></div>
+        </div>
+    </div>
+    <div class="container-fluid font">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col col-md-8">
+                <h2 class="text-center bg-dark font-weight-bold">Новый экзоскелет!</h2>
+
+                <img class="w-25 float-left mr-4 mb-2" src="../assets/news2.png">
+
+                <h3>Новострон 17.02.2043</h3>
+
+                <p class="text-justify">
+                    Данный экзоскелет является моделью нового поколения, котрорая обходит предыдущую модель в несколько раз! Сидит на человеке
+                    среднего телосложения как влитой. С помощью новейших технологий, вес экзоскелета не ощущается практически
+                    на 99.67%. Даже нося этот костюм без брони, вы гарантируете себе защиту от пуль до пятидесятого калибра.
+                    Данный экзоскелет работает на ядерных блоках, что в свою очередь может нанести вред вашему здоровью.
+                    Проконсультируйтесь с Мистером-врачом, перед тем, как приобретать данную продукцию компании West-Tek
+                    за 3499$! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit
+                    amet ipsum malesuada, molestie ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam
+                    malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam sem nibh, consectetur et fermentum eu,
+                    suscipit quis metus. Aenean eget lacinia risus. Suspendisse tempus lectus at augue ultrices, a molestie
+                    diam vehicula.
+                </p>
+            </div>
+            <div class="col-md"></div>
+        </div>
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col col-md-8">
+                <p class="text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie
                     ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur
                     ex porttitor id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Очень надеемся, что
                     вы не станете использовать экзоскелет в целях нанесения вреда вашим соседям и близким.
-                    <div class="news_comments">
-                        <div>
-                            <img src="../assets/profile_pic.jpg">Ура! Буду носить с большим удовольствием, как куплю...
-                        </div>
-                        <div>
-                            <img src="../assets/profile_pic.jpg">Да это какая-то обдираловка! Три тысячи долларов за кучу железа?! Ну уж нет! :(
-                        </div>
-                        <form>
-                            <div class="comments">
-                                <div style="    flex-basis: 0;
-                            
-                                flex-grow: 1;
-                                max-width: 100%;"><input type="text" placeholder="Ваше имя"></div>
-                                <div><input type="email" placeholder="Ваш e-mail"></div>
+                    <form class="border border-dark p-3 ">
+                        <div class="container-fluid">
+                            <div class="row m-1">
+                                <div class="col m-1 ">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют! Жду, когда смогу отдать своего протекрона на работу
+                                    к вам.
+                                </div>
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+                                </div>
                             </div>
-                            <div>
-                                <div><textarea placeholder="Ваш комментарий"></textarea></div>
-                                <div><input type="button" value="отправить"></div>
-                            </div>
-                        </form>
-                    </div>
+                            <div class="row m-1">
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
 
-                </div>
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
+                            </div>
+                            <div class="row m-1">
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
+                                <div class="col m-1">
+                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+
+                                    <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <input type="email" class="form-control" id="colFormLabel" placeholder="example@mailbox.dom" required>
+                            </div>
+                            <div class="col form-group">
+                                <input type="username" class="form-control" id="colFormLabel" placeholder="username" required>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col">
+                                <textarea class="form-control" placeholder="Комментарий"></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-group text-center">
+                            <div class="col">
+                                <input type="submit" value="Отправить" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </p>
             </div>
-            <h2 class="news_title">Война близко! Пора обратиться в Vault-Tec.</h2>
-            <div class="news_include">
-                <div class="article">
-                    <img src="../assets/news3.png">
-                    <div>
-                        <h3>Новострон 22.10.2077</h3>
-                        <p>
-                            У нас очень плохие новости. Обстановка во всём мире накаляется, что не есть хорошо. Мы очень надеемся, что бомбы не начнут
-                            падать с неба, как капли воды при осеннем дожде. Мы не хотим войны, но если что, наша страна
-                            всегда готова дать ответный огонь. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                            ac mollis sem. Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor. Donec a libero
-                            ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam
-                            sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse
-                            tempus lectus at augue ultrices, a molestie diam vehicula.
-                        </p>
-                    </div>
-                </div>
-                <div class="news_bottom">
+            <div class="col-md"></div>
+
+
+        </div>
+    </div>
+    <div class="container-fluid font">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col col-md-8">
+
+                <h2 class="text-center bg-dark font-weight-bold">Война близко! Пора обратиться в Vault-Tec.</h2>
+
+                <img class="w-25 float-left mr-4 mb-2" src="../assets/news3.png">
+                <h3>Новострон 22.10.2077</h3>
+                <p>
+                    У нас очень плохие новости. Обстановка во всём мире накаляется, что не есть хорошо. Мы очень надеемся, что бомбы не начнут
+                    падать с неба, как капли воды при осеннем дожде. Мы не хотим войны, но если что, наша страна всегда готова
+                    дать ответный огонь. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem.
+                    Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor.
+                    Etiam malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam sem nibh, consectetur et fermentum
+                    eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse tempus lectus at augue ultrices, a molestie
+                    diam vehicula.
+                </p>
+            </div>
+            <div class="col-md"></div>
+        </div>
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col col-md-8">
+                <p class="text-justify">
+
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie
                     ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur
                     ex porttitor id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia
-                    risus. Suspendisse tempus lectus at augue ultrices, a molestie diam vehicula
-                    <div class="news_comments">
-                        <form>
-                            <div>Ваше имя:
-                                <input type="text" placeholder="Ваше имя">
+                    risus. Самое время обратиться в Vault-Tec за резервацией места в убежище.
+                    <form class="border border-dark p-3 ">
+                            <div class="container-fluid">
+                                <div class="row m-1">
+                                    <div class="col m-1 ">
+                                        <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+                                        <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют! Жду, когда смогу отдать своего протекрона на работу
+                                        к вам.
+                                    </div>
+                                    <div class="col m-1">
+                                        <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+                                        <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+                                    </div>
+                                </div>
+                                <div class="row m-1">
+                                    <div class="col m-1">
+                                        <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+    
+                                        <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+    
+                                    </div>
+                                    <div class="col m-1">
+                                        <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+    
+                                        <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+    
+                                    </div>
+                                </div>
+                                <div class="row m-1">
+                                    <div class="col m-1">
+                                        <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+    
+                                        <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+    
+                                    </div>
+                                    <div class="col m-1">
+                                        <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>
+    
+                                        <img class="w-25 float-left pr-1" src="../assets/profile_pic.jpg"> Как круто, что всё роботизируют!
+    
+                                    </div>
+                                </div>
                             </div>
-                            <div>Ваш e-mail:
-                                <input type="email" placeholder="Ваш Email">
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="email" class="form-control" id="colFormLabel" placeholder="example@mailbox.dom" required>
+                                </div>
+                                <div class="col form-group">
+                                    <input type="username" class="form-control" id="colFormLabel" placeholder="username" required>
+                                </div>
                             </div>
-                            <div>Комментарий:
-                                <textarea placeholder="Ваше сообщение"></textarea>
+                            <div class="row form-group">
+                                <div class="col">
+                                    <textarea class="form-control" placeholder="Комментарий"></textarea>
+                                </div>
                             </div>
-                            <div>
-                                <input type="submit" value="отправить">
+                            <div class="row form-group text-center">
+                                <div class="col">
+                                    <input type="submit" value="Отправить" class="btn btn-success">
+                                </div>
                             </div>
                         </form>
+                </p>
+            </div>
+            <div class="col-md"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container-fluid bg-dark">
+        <div class="text-white font">
+            <div class="row">
+                <div class="col d-flex justify-content-center fs">
+                    <img class="align-middle footer1" src="../assets/footer-logo.png">
+                    <div class="text-justify">
+                        Данный сайт не является подлинным. Это всего лишь лабораторная работа и она в дальнейшем не превратится в новую корпорацию,
+                        которая поработит мир своей продукцией.
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="exclude"></div>
-    </div>
-    <div class="footer grid_item">
-        <div class="footer_style1">
-            <img src="../assets/footer-logo.png">
-            <p>
-                Данный сайт не является подлинным. Это всего лишь лабораторная работа и она в дальнейшем не превратится в новую корпорацию,
-                которая поработит мир своей продукцией.
-            </p>
-        </div>
-        <p>
-            <div class="footer_style2">
-                <img class="footer_img2" src="../assets/newsletter-sign-up-tower.svg">
-                <p>Подписка на рассылку новостей:</p>
-                <span class="follow_string">
-                    <input type="email" name="follow">
-                    <input type="button" name="follow_button" value="Подписаться">
-                </span>
-                <img class="footer_img3" src="../assets/globe.gif">
-                <img class="footer_img3" src="../assets/18.png">
+            <div class="row pt-3 pt-md-0">
+                <div class="col d-flex flex-row justify-content-center">
+                    <img class="h-50 pt-3" src="../assets/newsletter-sign-up-tower.svg">
+                    <p class="mt-md-4 ml-md-1">
+                        Подписка на рассылку новостей:
+                        <form class="form-inline">
+                            <div class="form-group mx-sm-1 mb-md-2">
+                                <input type="email" class="form-control" placeholder="e-mail">
+                            </div>
+                            <button type="submit" class="btn mr-md-3 btn-primary mb-md-2 button">Подписка</button>
+                        </form>
+                    </p>
+                    <img class="footer3" src="../assets/globe.gif">
+                    <img class="footer3" src="../assets/18.png">
+                </div>
             </div>
-        </p>
+
+        </div>
     </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
