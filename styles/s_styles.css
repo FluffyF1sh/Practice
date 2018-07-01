@@ -1,0 +1,41 @@
+.back{
+    font-family:'Courier New', Courier, monospace;
+    background-image: url(../assets/bbdy.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.hs{
+    background: linear-gradient(to bottom, rgb(54, 54, 54), black);
+}
+body .links{
+    text-decoration: none; 
+    color: green;
+    font-size: 1.5vw; 
+    padding-left: 0.6em; 
+    text-shadow: 0.02em 0.02em black; 
+}
+.content{
+    padding-top: 8vw;
+}
+.item{
+    display: block;
+    box-sizing: border-box;
+    margin: 1vw;
+    padding: 1vw;
+    width:20vw; 
+    height: 28.5vw;
+}
+.item1{
+    display: block;
+    box-sizing: border-box;
+    margin: 1vw;
+    padding: 1vw;
+    width:20vw; 
+    height: 25vw;
+}
+.image{
+    width: 10%;
+}
+.title{
+    text-shadow: black 0.1em 0.1em ;
+}
