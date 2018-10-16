@@ -13,40 +13,8 @@
 </head>
 
 <body class="back">
-    <nav class="shadow row fixed-top hs navbar navbar-expand-lg navbar-light bg-light">
-        <div class="col d-flex flex-row justify-content-start align-items-center">
-            <img class="navbar-brand w-25" src="assets/hlogo.png">
-            <div>
-                <a class="pl-1-md links font-weight-bold font-italic font-header" href="../index.html">West-Tek power armor</a>
-            </div>
-        </div>
-        <div class="col d-flex flex-row justify-content-center align-items-center ">
-            <form class="form-inline my-auto my-lg-0 d-none d-md-block">
-                <input class="form-control mr-sm-2" type="search" placeholder="Введите ваш запрос" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
-            </form>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="col justify-content-end navbar-nav">
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link active" role="button" aria-pressed="true"
-                    href="../index.html">Магазин
-                    <span class="sr-only">(current)</span>
-                </a>
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
-                    href="pages/news.html">Новости</a>
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
-                    href="pages/about.html">О компании</a>
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
-                    href="https://mamaikan.github.io/Nuka-Cola/index.html">Nuka-Cola</a>
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-danger  btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
-                    href="pages/news.html">Корзина</a>
-            </div>
-        </div>
-    </nav>
+    <nav-bar id="nav" :logo="logo" :refs="refs" :cart="cart"></nav-bar>
+
     <div id="parm" class="content container-fluid">
         <div class="text-white pt-5 pt-md-0">
             <h1 class="title font-weight-bold">
@@ -56,43 +24,18 @@
             <parm :armors="armors"></parm>
         </div>
     </div>
+
     <div id="attrib" class="container-fluid text-white">
         <h1 class="title font-weight-bold">
             <span>Атрибутика</span>
             <hr>
         </h1>
         <attrib :slots="slots"></attrib>
-        
     </div>
 
     <div class="container-fluid bg-dark">
         <div class="text-white font">
-            <div class="row">
-                <div class="col d-flex justify-content-center fs">
-                    <img class="align-middle footer1" src="assets/footer-logo.png">
-                    <div class="text-justify">
-                        Данный сайт не является подлинным. Это всего лишь лабораторная работа и она в дальнейшем не превратится в новую корпорацию,
-                        которая поработит мир своей продукцией.
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-3 pt-md-0">
-                <div class="col d-flex flex-row justify-content-center">
-                    <img class="h-50 pt-3" src="assets/newsletter-sign-up-tower.svg">
-                    <p class="mt-md-4 ml-md-1">
-                        Подписка на рассылку новостей:
-                        <form class="form-inline">
-                            <div class="form-group mx-sm-1 mb-md-2">
-                                <input type="email" class="form-control" placeholder="e-mail">
-                            </div>
-                            <button type="submit" class="btn mr-md-3 btn-primary mb-md-2 button">Подписка</button>
-                        </form>
-                    </p>
-                    <img class="footer3" src="assets/globe.gif">
-                    <img class="footer3" src="assets/18.png">
-                </div>
-            </div>
-
+            <Foot-Bar id="foot" :desc="desc" :teller="teller" :logos="logos"></Foot-Bar>
         </div>
     </div>
 
@@ -106,6 +49,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="scripts/vue-main.js"></script>
+    <script src="scripts/anima.js"></script>
 </body>
 
 </html>

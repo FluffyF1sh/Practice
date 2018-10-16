@@ -1,33 +1,89 @@
+Vue.component('NavBar', {
+    props: ['logo', 'refs', 'cart'],
+    template: '\
+    <nav class="shadow row fixed-top hs navbar navbar-expand-lg navbar-light bg-light">\
+        <div class="col d-flex flex-row justify-content-start align-items-center">\
+            <img class="navbar-brand w-25" :src="logo.img">\
+            <div class="pl-5 pl-5-md">\
+                <a class="pl-1 pl-1-md links font-weight-bold font-italic font-header" :href="logo.url">{{logo.text}}</a>\
+            </div>\
+        </div>\
+        <div class="col d-flex flex-row justify-content-center align-items-center ">\
+            <form class="form-inline my-auto my-lg-0 d-none d-md-block">\
+                <input class="form-control mr-sm-2" type="search" placeholder="Введите ваш запрос" aria-label="Search">\
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Поиск</button>\
+            </form>\
+        </div>\
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"\
+            aria-expanded="false" aria-label="Toggle navigation">\
+            <span class="navbar-toggler-icon"></span>\
+        </button>\
+        <div class="collapse navbar-collapse" id="menu">\
+            <ul class="nav navbar-nav ml-auto">\
+                <li v-for="ref in refs" :key="ref.id" :ref="ref" class="nav-item">\
+                    <a class="mr-md-2 btn btn-success btn-lg text-white nav-link" role="button" aria-pressed="true" :href="ref.url">{{ref.text}}</a>\
+                </li>\
+            </ul>\
+            <ul class="navbar-nav">\
+                <li class="nav-item"\
+                    <a class="mr-md-2 btn btn-danger btn-lg text-white nav-link" role="button" aria-pressed="true" :href="cart.url">{{cart.text}}</a>\
+                </li>\
+            </ul>\
+        </div>\
+    </nav>'
+})
+new Vue({
+    el: '#nav',
+    data: {
+        logo: { img: 'assets/hlogo.png', url: '../index.html', text: 'West-Tek power armor' },
+        refs: [
+            { id: 1, url: '../index.html', text: 'Магазин' },
+            { id: 2, url: 'pages/news.html', text: 'Новости' },
+            { id: 3, url: 'pages/about.html', text: 'О компании' },
+            { id: 4, url: 'https://mamaikan.github.io/Nuka-Cola/index.html', text: 'Nuka-Cola' },
+        ],
+        cart: { url: 'pages/news.html', text: 'Корзина' }
+    }
+})
+
 Vue.component('parm', {
     props: ['armors'],
     template: '<div>\
     <div  class="row text-center font-weight-bold font">\
-                <div v-for="armor in armors.slice(0,4)" class="col-md m-3 p-2 m-md-4 pt-md-3 rounded border border-light bg-dark">\
-                <img class="mw-100 rounded bg-light" :src="armor.url">\
+            <div v-for="armor in armors.slice(0,4)" class="col-md m-3 p-2 m-md-4 pt-md-3 rounded border border-light bg-dark">\
+                <img class="mw-100 rounded bg-light" :src="armor.pic">\
                     <div>\
                         <div>{{armor.model}}</div>\
                         <div>Цена: {{armor.price}}</div>\
                     </div>\
-                    <div class="bg-light text-dark">\
-                        Страница товара\
-                    </div>\
-                </div>\
-                </div>\
-            <div class="row text-center font-weight-bold font">\
-                <div  v-for="armor in armors.slice(4)" class="col-md m-3 p-2 m-md-4 pt-md-3 rounded border border-light bg-dark">\
-                <img class="mw-100 rounded bg-light" :src="armor.url">\
+                    <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                    <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
+            </div>\
+    </div>\
+    <div class="row text-center font-weight-bold font">\
+            <div  v-for="armor in armors.slice(4,8)" class="col-md m-3 p-2 m-md-4 pt-md-3 rounded border border-light bg-dark">\
+            <img class="mw-100 rounded bg-light" :src="armor.pic">\
                 <div>\
                     <div>{{armor.model}}</div>\
                     <div>Цена: {{armor.price}}</div>\
                 </div>\
-                <div class="bg-light text-dark">\
-                    Страница товара\
-                </div>\
+            <button type="button" class="btn btn-light px-2">Страница товара</button>\
+            <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
-        </div>\
-    </div>'
+    </div>\
+    <div class="row text-center font-weight-bold font">\
+            <div  v-for="armor in armors.slice(8,12)" class="col-md m-3 p-2 m-md-4 pt-md-3 rounded border border-light bg-dark">\
+            <img class="mw-100 rounded bg-light" :src="armor.pic">\
+                <div>\
+                    <div>{{armor.model}}</div>\
+                    <div>Цена: {{armor.price}}</div>\
+                </div>\
+            <button type="button" class="btn btn-light px-2">Страница товара</button>\
+            <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
+            </div>\
+    </div>\
+</div>'
 })
-
 new Vue({
     el: '#parm',
     data: {
@@ -36,84 +92,105 @@ new Vue({
                 id: 1,
                 model: 'Модель T-60',
                 price: '76990 крышек',
-                url: 'assets/T-60bas.png'
+                pic: 'assets/T-60bas.png'
             },
             {
                 id: 2,
                 model: 'Модель T-45',
                 price: '54690 крышек',
-                url: 'assets/T-45bas.png'
+                pic: 'assets/T-45bas.png'
             },
             {
                 id: 3,
                 model: 'Модель X-01 (ржавый)',
                 price: '129890 крышек',
-                url: 'assets/X-01.png'
+                pic: 'assets/X-01.png'
             },
             {
                 id: 4,
                 model: 'Модель T-45 (ржавый)',
                 price: '34000 крышек',
-                url: 'assets/T-45.png'
+                pic: 'assets/T-45.png'
             },
             {
                 id: 5,
                 model: 'Модель T-60 (ржавый)',
                 price: '48900 крышек',
-                url: 'assets/T-60.png'
+                pic: 'assets/T-60.png'
             },
             {
                 id: 6,
                 model: 'Модель T-51b',
                 price: '65990 крышек',
-                url: 'assets/T-51bBAS.png'
+                pic: 'assets/T-51bBAS.png'
             },
             {
                 id: 7,
                 model: 'Рейдерская броня',
                 price: '25690 крышек',
-                url: 'assets/Raider.png'
+                pic: 'assets/Raider.png'
             },
             {
                 id: 8,
                 model: 'Экзоскелет (основа)',
                 price: '9100 крышек',
-                url: 'assets/Frame.png'
+                pic: 'assets/Frame.png'
+            },
+            {
+                id: 9,
+                model: 'Модель T-45 (Окраска "Hot Pink")',
+                price: '36890 крышек',
+                pic: 'assets/FO4_T-45_Hot_Pink.png'
+            },
+            {
+                id: 10,
+                model: 'Модель X-01',
+                price: '152000 крышек',
+                pic: 'assets/X-01_bas.png'
+            },
+            {
+                id: 11,
+                model: 'Модель T-51b (Окраска "Nuka-Cola")',
+                price: '77845 крышек',
+                pic: 'assets/Nuka-T51f.png'
+            },
+            {
+                id: 12,
+                model: 'Модель X-01 (Окраска "Quantum")',
+                price: '229960 крышек',
+                pic: 'assets/Quantum_X-01.png'
             }
         ]
     }
 })
 
-Vue.component('attrib',{
+Vue.component('attrib', {
     props: ['slots'],
     template: '<div>\
     <div  class="row text-center font-weight-bold font">\
                 <div v-for="slot in slots.slice(0,4)" class="col-md m-3 p-2 m-md-4 pt-md-3 rounded border border-light bg-dark">\
-                <img class="mw-100 rounded bg-light" :src="slot.url">\
+                <img class="mw-100 rounded bg-light" :src="slot.pic">\
                     <div>\
                         <div>{{slot.model}}</div>\
                         <div>Цена: {{slot.price}}</div>\
                     </div>\
-                    <div class="bg-light text-dark">\
-                        Страница товара\
-                    </div>\
+                    <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                    <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
                 </div>\
                 </div>\
             <div class="row text-center font-weight-bold font">\
                 <div  v-for="slot in slots.slice(4)" class="col-md m-3 p-2 m-md-4 pt-md-3 rounded border border-light bg-dark">\
-                <img class="mw-100 rounded bg-light" :src="slot.url">\
+                <img class="mw-100 rounded bg-light" :src="slot.pic">\
                 <div>\
                     <div>{{slot.model}}</div>\
                     <div>Цена: {{slot.price}}</div>\
                 </div>\
-                <div class="bg-light text-dark">\
-                    Страница товара\
-                </div>\
+                <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
         </div>\
     </div>'
 })
-
 new Vue({
     el: '#attrib',
     data: {
@@ -122,50 +199,95 @@ new Vue({
                 id: 1,
                 model: 'Шлем брони T-45',
                 price: '7690 крышек',
-                url: 'assets/t45helm.png'
+                pic: 'assets/t45helm.png'
             },
             {
                 id: 2,
                 model: 'Шлем рейнджера НКР',
                 price: '22700 крышек',
-                url: 'assets/RangerHelm.png'
+                pic: 'assets/RangerHelm.png'
             },
             {
                 id: 3,
                 model: 'Шлем брони T-51b',
                 price: '8390 крышек',
-                url: 'assets/t51helm.png'
+                pic: 'assets/t51helm.png'
             },
             {
                 id: 4,
                 model: 'Фигурка солдата в броне T-60',
                 price: '3590 крышек',
-                url: 'assets/slot4.PNG'
+                pic: 'assets/slot4.PNG'
             },
             {
                 id: 5,
                 model: 'Ядерный блок',
                 price: '11890 крышек',
-                url: 'assets/fusion_core.PNG'
+                pic: 'assets/fusion_core.PNG'
             },
             {
                 id: 6,
                 model: 'Набор "собери сам" Nuka-Cola',
                 price: '45000 крышек',
-                url: 'assets/nuka-pa.PNG'
+                pic: 'assets/nuka-pa.PNG'
             },
             {
                 id: 7,
                 model: 'Фигурка "Атом"',
                 price: '2780 крышек',
-                url: 'assets/t60stat.PNG'
+                pic: 'assets/t60stat.PNG'
             },
             {
                 id: 8,
                 model: 'Фигурка солдата в броне T-51',
                 price: '3400 крышек',
-                url: 'assets/t51stat.PNG'
+                pic: 'assets/t51stat.PNG'
             }
+        ]
+    }
+})
+
+Vue.component('FootBar', {
+    props: ['desc', 'teller', 'logos'],
+    template: '<div>\
+    <div class="row">\
+            <div class="col d-flex justify-content-center fs">\
+                <img class="align-middle footer1" :src="desc.url">\
+                <div class="text-justify">\
+                    {{desc.text}}\
+                </div>\
+            </div>\
+    </div>\
+    <div class="row pt-3 pt-md-0">\
+        <div class="col d-flex flex-row justify-content-center">\
+            <img class="pt-1-md" :src="teller.url">\
+            <p class="mt-md-4 ml-md-1">\
+                {{teller.text}}\
+                <form class="form-inline">\
+                    <div class="form-group mx-sm-1 mb-md-4">\
+                        <input type="email" class="form-control" placeholder="e-mail">\
+                    </div>\
+                    <button type="submit" class="btn mr-md-3 btn-primary mb-md-4 button">Подписка</button>\
+                </form>\
+            </p>\
+            <div v-for="logo in logos" :key="logo.id" :logo="logo">\
+                <img class="mw-100 px-1" :src="logo.url">\
+            </div>\
+        </div>\
+    </div>\
+    </div>'
+})
+
+new Vue({
+    el: '#foot',
+    data: {
+        desc: {
+            url: 'assets/footer-logo.png', text: 'Данный сайт не является подлинным. Это всего лишь лабораторная работа и она в дальнейшем не превратится в новую корпорацию,\
+        которая поработит мир своей продукцией.'},
+        teller: { url: 'assets/newsletter-sign-up-tower.svg', text: 'Подписка на рассылку новостей:' },
+        logos: [
+            { id: 1, url: 'assets/globe.gif' },
+            { id: 2, url: 'assets/18.png' }
         ]
     }
 })

@@ -13,54 +13,19 @@
 </head>
 
 <body class="back">
-    <nav class="shadow row fixed-top hs navbar navbar-expand-lg navbar-light bg-light">
-        <div class="col d-flex flex-row justify-content-start align-items-center">
-            <img class="navbar-brand w-25" src="../assets/hlogo.png">
-            <div>
-                <a class="pl-1-md links font-weight-bold font-italic font-header" href="../index.html">West-Tek power armor</a>
-            </div>
-        </div>
-        <div class="col d-flex flex-row justify-content-center align-items-center ">
-            <form class="form-inline my-auto my-lg-0 d-none d-md-block">
-                <input class="form-control mr-sm-2" type="search" placeholder="Введите ваш запрос" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
-            </form>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="col justify-content-end navbar-nav">
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
-                    href="../index.html">Магазин</a>
-
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
-                    href="news.html">Новости
-
-                </a>
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav-item nav-link active" role="button" aria-pressed="true"
-                    href="about.html">О компании
-                    <span class="sr-only">(current)</span>
-                </a>
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-success btn-lg text-white nav -item nav-link" role="button" aria-pressed="true"
-                    href="https://mamaikan.github.io/Nuka-Cola/index.html">Nuka-Cola</a>
-                <a class="mr-1 ml-3 ml-md-1 btn btn-outline-danger  btn-lg text-white nav-item nav-link" role="button" aria-pressed="true"
-                    href="news.html">Корзина</a>
-            </div>
-        </div>
-    </nav>
+    <nav-bar id="nav" :logo="logo" :refs="refs" :cart="cart"></nav-bar>
     <div class="content container-fluid font">
         <div class="row">
             <div class="col-md"></div>
             <div class="col col-md-8">
                 <h2 class="text-center bg-dark font-weight-bold">Информация о компании West-Tek</h2>
-                <div class="text-justify p-2">Компания была основана в 2002 году как подрядчик американского правительства. Работала по двум направлениям:
-                    биомедицинском — занималась биотехнологиями, в том числе вирусом ВРЭ, позже перенесённом на военную базу
-                    Марипоза — и оружейном, в рамках которого разработала, например, многие образцы лазерного оружия и силовой
-                    брони. В 2069 году «Вест-Тек» являлась крупнейшим поставщиком технологий для армии США.</div>
-                <p class="text-justify p-2">Исследовательский комплекс «Вест-Тек» был уничтожен 23 октября 2077 года прямым попаданием ядерной бомбы
-                    и на века остался одним из самых радиоактивных мест Западного побережья.</p>
+                <div class="text-justify p-2">Компания была основана в 2002 году как подрядчик американского правительства.
+                    Работала по двум направлениям: биомедицинском — занималась биотехнологиями, в том числе вирусом ВРЭ,
+                    позже перенесённом на военную базу Марипоза — и оружейном, в рамках которого разработала, например, многие
+                    образцы лазерного оружия и силовой брони. В 2069 году «Вест-Тек» являлась крупнейшим поставщиком технологий
+                    для армии США.</div>
+                <div class="text-justify p-2">Исследовательский комплекс «Вест-Тек» был уничтожен 23 октября 2077 года прямым
+                    попаданием ядерной бомбы и на века остался одним из самых радиоактивных мест Западного побережья.</div>
                 <h1 class="p-1">Проект ВРЭ</h1>
                 <hr>
                 <div class="text-justify p-2">
@@ -70,19 +35,19 @@
                     и получили название «Проект «Вирион-Иммунитет»» (PIVP, Pan-Immunity Virion Project). Проект официально
                     стартовал 15 сентября 2073 года, его руководителем стал Леон фон Фельден.
                 </div>
-                <p class="text-justify p-2">
+                <div class="text-justify p-2">
                     Однако в ходе исследований было обнаружено, что новая сыворотка увеличивает мышечную массу и выносливость подопытных. Проект
                     был переименован в «Вирус Рукотворной Эволюции», ВРЭ. 3 января 2076 года из Центра в лабораторию была
                     направлена группа военных, во главе с полковником Робертом Спайнделом. После того, как вирус был готов,
                     исследования ВРЭ были перенесены на военную базу Марипоза.
-                </p>
-                <p class="text-justify p-2">
+                </div>
+                <div class="text-justify p-2">
                     Во второй половине октября 2077 года военная охрана базы взбунтовалась против экспериментов на людях. Полковник Спайндел
                     застрелился, капитан Роджер Мэксон поочередно расстрелял всех ведущих ученых «Вест-Тек» и объявил о неподчинении
                     американскому правительству. Впрочем, на фоне грянувшей 23 октября 2077 года ядерной катастрофы это заявление
                     осталось незамеченным. Позже военные — ядро будущего Братства Стали — покинули базу; гражданскому персоналу
                     — работникам «Вест-Тек» — было приказано остаться на базе. Дальнейшая судьба вестековцев с Марипозы неизвестна.
-                </p>
+                </div>
             </div>
             <div class="col-md"></div>
         </div>
@@ -97,26 +62,26 @@
                         <p>Лучшая рабочая сила. Всегда готов вкалывать. Человеческий труд в нашем производстве заменён полностью.</p>
                     </div>
                     <div class="col-md">
-                        <img class="w-100"  src="../assets/mister-brave.jpg">
+                        <img class="w-100" src="../assets/mister-brave.jpg">
                         <h3>Мистер-Храбрец</h3>
                         <p>Наша защита и безопасноть на территории завода. Правда, иногда он даёт сбой, но это не страшно.</p>
                     </div>
                     <div class="col-md">
-                        <img class="w-100"  src="../assets/newstron.jpg">
+                        <img class="w-100" src="../assets/newstron.jpg">
                         <h3>Новострон</h3>
                         <p>Наш разносчик новостей. Подписка снизу впишет ваш адрес в список новостной рассылки. Не волнуйтесь,
                             он не испортит ваш сон по утрам.
                         </p>
                     </div>
                     <div class="col-md">
-                        <img class="w-100"  src="../assets/Masterbrain.jpg">
+                        <img class="w-100" src="../assets/Masterbrain.jpg">
                         <h3>Робомозг</h3>
                         <p>Ответственный за всю мозговую деятельность в производстве. Решает кроссворды и другие головоломки
                             в считанные секунды.
                         </p>
                     </div>
                     <div class="col-md">
-                        <img class="w-100"  src="../assets/mk_2.jpg">
+                        <img class="w-100" src="../assets/mk_2.jpg">
                         <h3>Секьюритрон</h3>
                         <p>Ещё один робот, защищающий наше производство. Спасибо вам, Мистер Хаус, что компания РобКо производит
                             столь прекрасных роботов!
@@ -129,22 +94,52 @@
         <div class="row">
             <div class="col-md"></div>
             <div class="col col-md-8">
-                    <h2 class="text-center bg-dark font-weight-bold">Вакансии на сотрудничество с нами:</h2>
-                    <div class="vacancy">
-            
-                        <form>
-                            <label for="id">Кто вы?</label>
-                            <select>
-                                <option value="0">Человек</option>
-                                <option value="1">Протектрон</option>
-                                <option value="2">Робоглаз</option>
-                                <option value="3">Робомозг</option>
-                                <option value="4">Секьюритрон</option>
-                                <option value="5">Мистер-Помощник</option>
-                                <option value="6">Мистер-Храбрец</option>
-                            </select>
-                        </form>
-                    </div>
+                <h2 class="text-center bg-dark font-weight-bold">Вакансии на сотрудничество с нами:</h2>
+                <div class="m-md-2">
+                    <form>
+                        <div class="form-row p-2">
+                            <div class="col">
+                                <label>Имя*</label>
+                                <input type="text" class="form-control" placeholder="Имя">
+                            </div>
+                            <div class="col">
+                                <label>Фамилия*</label>
+                                <input type="text" class="form-control" placeholder="Фамилия">
+                            </div>
+                        </div>
+                        <div class="form-row p-2">
+                            <div class="col">
+                                    <label>Кем вы являетесь</label>
+                                    <select class="form-control">
+                                            <option selected>Нажмите для выбора</option>
+                                            <option value="1">Секьюритрон</option>
+                                            <option value="2">Протектрон</option>
+                                            <option value="3">Новострон</option>
+                                            <option value="4">Мистер-Помощник</option>
+                                            <option value="5">Мистер-Храбрец</option>
+                                            <option value="6">Робомозг</option>
+                                            <option value="7">Робоглаз</option>
+                                            <option value="8">Человек (Ценится меньше всего)</option>
+                                    </select>
+                            </div>
+                            <div class="col">
+                                <label>Адрес*</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Улица, номер дома">
+                            </div>
+                        </div>
+                        <div class="form-row p-2">
+                                <div class="col">
+                                        <fieldset disabled>
+                                                <div class="form-group">
+                                                  <label for="disabledTextInput">Что вы можете рассказать о себе* (Если вы человек, нам это безразлично).</label>
+                                                  <input type="text" id="disabledTextInput" class="form-control" placeholder="Ой, не работает, хватит лгать себе, роботы лучше во всём.">
+                                                </div>
+                                        </fieldset>
+                                </div>
+                        </div>
+                        <small class="form-text">"*" помечены обязательные для заполнения поля. </small>
+                    </form>
+                </div>
             </div>
             <div class="col-md"></div>
         </div>
@@ -153,32 +148,7 @@
 
     <div class="container-fluid bg-dark">
         <div class="text-white font">
-            <div class="row">
-                <div class="col d-flex justify-content-center fs">
-                    <img class="align-middle footer1" src="../assets/footer-logo.png">
-                    <div class="text-justify">
-                        Данный сайт не является подлинным. Это всего лишь лабораторная работа и она в дальнейшем не превратится в новую корпорацию,
-                        которая поработит мир своей продукцией.
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-3 pt-md-0">
-                <div class="col d-flex flex-row justify-content-center">
-                    <img class="h-50 pt-3" src="../assets/newsletter-sign-up-tower.svg">
-                    <p class="mt-md-4 ml-md-1">
-                        Подписка на рассылку новостей:
-                        <form class="form-inline">
-                            <div class="form-group mx-sm-1 mb-md-2">
-                                <input type="email" class="form-control" placeholder="e-mail">
-                            </div>
-                            <button type="submit" class="btn mr-md-3 btn-primary mb-md-2 button">Подписка</button>
-                        </form>
-                    </p>
-                    <img class="footer3" src="../assets/globe.gif">
-                    <img class="footer3" src="../assets/18.png">
-                </div>
-            </div>
-
+            <Foot-Bar id="foot" :desc="desc" :teller="teller" :logos="logos"></Foot-Bar>
         </div>
     </div>
 
@@ -190,6 +160,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../scripts/vue-about.js"></script>
 </body>
 
 </html>
