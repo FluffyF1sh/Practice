@@ -94,7 +94,7 @@ new Vue({
                 id: 1,
                 model: 'Модель T-60',
                 price: '76990 крышек',
-                pic: 'assets/T-60bas.png'
+                pic: '../assets/T-60bas.png'
             },
             {
                 id: 2,
