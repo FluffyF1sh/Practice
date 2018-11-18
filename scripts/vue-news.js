@@ -2,24 +2,26 @@ Vue.component('NavBar', {
     props: ['logo', 'refs', 'cart'],
     template: '\
     <nav class="shadow row fixed-top hs navbar navbar-expand-lg navbar-light bg-light">\
-        <div class="col d-flex flex-row justify-content-start align-items-center">\
-            <img class="navbar-brand w-25" :src="logo.img">\
-            <div class="pl-5 pl-5-md">\
-                <a class="pl-1 pl-1-md links font-weight-bold font-italic font-header" :href="logo.url">{{logo.text}}</a>\
+        <div class="navbar-brand col d-flex flex-row justify-content-start align-items-center">\
+            <img class="w-25" :src="logo.img">\
+            <div class="pl-3 pl-3-md">\
+                <a class="pl-1 pl-1-md headline font-weight-bold font-italic font-header" :href="logo.url">{{logo.text}}</a>\
             </div>\
-        </div>\
-        <div class="col d-flex flex-row justify-content-center align-items-center ">\
-            <form class="form-inline my-auto my-lg-0 d-none d-md-block">\
-                <input class="form-control mr-sm-2" type="search" placeholder="Введите ваш запрос" aria-label="Search">\
-                <button class="btn btn-success my-2 my-sm-0" type="submit">Поиск</button>\
-            </form>\
         </div>\
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"\
             aria-expanded="false" aria-label="Toggle navigation">\
             <span class="navbar-toggler-icon"></span>\
         </button>\
         <div class="collapse navbar-collapse" id="menu">\
-            <ul class="nav navbar-nav ml-auto">\
+            <ul class="navbar-nav ml-auto">\
+                <li class="col-lg d-flex flex-row justify-content-center align-items-center nav-item">\
+                    <form class="form-inline my-lg-0">\
+                        <input class="form-control" type="search" placeholder="Введите ваш запрос" aria-label="Search">\
+                        <button class="btn btn-success my-lg-2 my-sm-0" type="submit">Поиск</button>\
+                    </form>\
+                </li>\
+            </ul>\
+            <ul class="navbar-nav ml-auto">\
                 <li v-for="ref in refs" :key="ref.id" :ref="ref" class="nav-item">\
                     <a class="mr-md-2 btn btn-success btn-lg text-white nav-link" role="button" aria-pressed="true" :href="ref.url">{{ref.text}}</a>\
                 </li>\
@@ -48,32 +50,33 @@ new Vue({
 
 Vue.component('FootBar', {
     props: ['desc', 'teller', 'logos'],
-    template: '<div>\
-    <div class="row">\
-            <div class="col d-flex justify-content-center fs">\
-                <img class="align-middle footer1" :src="desc.url">\
-                <div class="text-justify">\
-                    {{desc.text}}\
+    template: '\
+    <div class="fot">\
+        <div class="row">\
+                <div class="col d-flex justify-content-center fs">\
+                    <img class="align-middle footer1 d-sm-none d-md-none d-lg-inline" :src="desc.url">\
+                    <div class="text-justify">\
+                        {{desc.text}}\
+                    </div>\
+                </div>\
+        </div>\
+        <div class="row mt-sm-3 mt-md-3 mt-lg-0 pt-md-0">\
+            <div class="col d-flex flex-row justify-content-center">\
+                <img class="pt-1-md d-sm-none d-md-none d-lg-inline" :src="teller.url">\
+                <p class="mt-lg-4 ml-lg-1">\
+                    {{teller.text}}\
+                    <form class="form-inline">\
+                        <div class="form-group mb-md-4">\
+                            <input type="email" class="form-control" placeholder="e-mail">\
+                        </div>\
+                        <button type="submit" class="btn mr-sm-0 mr-lg-3 btn-primary mb-lg-4">Подписка</button>\
+                    </form>\
+                </p>\
+                <div v-for="logo in logos" :key="logo.id" :logo="logo">\
+                    <img class="mw-100 px-1 d-sm-none d-md-none d-lg-inline" :src="logo.url">\
                 </div>\
             </div>\
-    </div>\
-    <div class="row pt-3 pt-md-0">\
-        <div class="col d-flex flex-row justify-content-center">\
-            <img class="pt-1-md" :src="teller.url">\
-            <p class="mt-md-4 ml-md-1">\
-                {{teller.text}}\
-                <form class="form-inline">\
-                    <div class="form-group mx-sm-1 mb-md-4">\
-                        <input type="email" class="form-control" placeholder="e-mail">\
-                    </div>\
-                    <button type="submit" class="btn mr-md-3 btn-primary mb-md-4 button">Подписка</button>\
-                </form>\
-            </p>\
-            <div v-for="logo in logos" :key="logo.id" :logo="logo">\
-                <img class="mw-100 px-1" :src="logo.url">\
-            </div>\
         </div>\
-    </div>\
     </div>'
 })
 
@@ -91,7 +94,7 @@ new Vue({
     }
 })
 
-Vue.component('NewsBar',{
+Vue.component('NewsBar', {
     props: ['posts'],
     template: '\
     <div class="container-fluid font">\
@@ -116,45 +119,52 @@ Vue.component('NewsBar',{
                         <div class="container-fluid border border-dark">\
                             <div class="row m-1">\
                                 <div class="col m-1 ">\
-                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>\
+                                    <div class="text-center font-weight-bold">Eugene 9.12.2024</div>\
                                     <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div>Как круто, что всё роботизируют! Жду, когда смогу отдать своего протекрона на работу\
                                     к вам.\
                                 </div>\
                                 <div class="col m-1">\
-                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>\
-                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> Как круто, что всё роботизируют!\
+                                    <div class="text-center font-weight-bold">Robert 11.12.2024</div>\
+                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> Скоро обычным людям места не останется в этом мире...\
                                 </div>\
                             </div>\
                             <div class="row m-1">\
                                 <div class="col m-1">\
-                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>\
-                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> Как круто, что всё роботизируют!\
+                                    <div class="text-center font-weight-bold">Boosher232 01.01.2025</div>\
+                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> С Новым годом!!!\
                                 </div>\
                                 <div class="col m-1">\
-                                    <div class="text-center font-weight-bold">Hailrake 22.12.2024</div>\
-                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> Как круто, что всё роботизируют!\
+                                    <div class="text-center font-weight-bold">???????? 22.02.2024</div>\
+                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> djlfh;asl lsl.. OS>?\
                                 </div>\
                             </div>\
-                            <div class="form-row">\
-                            <div class="col-md form-group">\
-                                <input type="email" class="form-control" id="colFormLabel" placeholder="example@mailbox.dom" required>\
-                            </div>\
-                            <div class="col-md form-group">\
-                                <input type="username" class="form-control" id="colFormLabel" placeholder="username" required>\
-                            </div>\
-                        </div>\
-                        <div class="row form-group">\
-                            <div class="col">\
-                                <textarea class="form-control" placeholder="Комментарий"></textarea>\
-                            </div>\
-                        </div>\
-                        <div class="row form-group text-center">\
-                            <div class="col">\
-                                <input type="submit" value="Отправить" class="btn btn-success">\
-                            </div>\
-                        </div>\
-                        </div>\
-                    </form>\
+                            <form>\
+                                <div class="row form-row">\
+                                    <div class="col form-group">\
+                                        <label>Ваш e-mail</label>\
+                                        <input type="email" class="form-control" id="colFormLabel" placeholder="example@mailbox.dom" required>\
+                                    </div>\
+                                    <div class="col form-group">\
+                                        <label>Ваш никнейм</label>\
+                                        <input type="username" class="form-control" id="colFormLabel" placeholder="username" required>\
+                                    </div>\
+                                </div>\
+                                <div class="row form-group">\
+                                    <div class="col">\
+                                        <label>Комментарий:</label>\
+                                        <textarea class="form-control" placeholder="Комментарий"></textarea>\
+                                    </div>\
+                                </div>\
+                                <div class="row form-group text-center">\
+                                    <div class="col">\
+                                        <input type="submit" value="Отправить" class="btn btn-success">\
+                                    </div>\
+                                    <div class="col">\
+                                        <input type="reset" value="Сбросить" class="btn btn-danger">\
+                                    </div>\
+                                </div>\
+                            </form>\
+                    </div>\
             </p>\
         </div>\
         <div class="col-md"></div>\
@@ -198,14 +208,14 @@ new Vue({
             вы не станете использовать экзоскелет в целях нанесения вреда вашим соседям и близким.'
             },
             {
-                id: 3, header: 'Война близко! Пора обратиться в Vault-Tec.', url: '../assets/news3.png', poster: 'Новострон 22.10.2077', 
+                id: 3, header: 'Война близко! Пора обратиться в Vault-Tec.', url: '../assets/news3.png', poster: 'Новострон 22.10.2077',
                 textUp: 'У нас очень плохие новости. Обстановка во всём мире накаляется, что не есть хорошо. Мы очень надеемся, что бомбы не начнут\
             падать с неба, как капли воды при осеннем дожде. Мы не хотим войны, но если что, наша страна всегда готова\
             дать ответный огонь. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem.\
             Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor.\
             Etiam malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam sem nibh, consectetur et fermentum\
             eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse tempus lectus at augue ultrices, a molestie\
-            diam vehicula.', 
+            diam vehicula.',
                 textDown: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie\
             ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur\
             ex porttitor id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia\

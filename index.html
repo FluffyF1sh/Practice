@@ -13,25 +13,35 @@
 </head>
 
 <body class="back">
-    <nav-bar id="nav" :logo="logo" :refs="refs" :cart="cart"></nav-bar>
 
-    <div id="parm" class="content container-fluid">
-        <div class="text-white pt-5 pt-md-0">
+    <!--Верхняя панель-->
+
+    <nav-bar id="nav" :logo="logo" :refs="refs" :cart="cart"></nav-bar>
+    <div class="container-fluid ">
+        <!--Раздел силовой брони-->
+
+        <div id="parm" class="content container-fluid text-white">
+            <div class="pt-5 pt-md-0">
+                <h1 class="title font-weight-bold">
+                    <span>Силовая броня</span>
+                    <hr>
+                </h1>
+                <parm :armors="armors"></parm>
+            </div>
+        </div>
+
+        <!--Раздел атрибутики-->
+
+        <div id="attrib" class="container-fluid text-white">
             <h1 class="title font-weight-bold">
-                <span>Силовая броня</span>
+                <span>Атрибутика</span>
                 <hr>
             </h1>
-            <parm :armors="armors"></parm>
+            <attrib :slots="slots"></attrib>
         </div>
     </div>
 
-    <div id="attrib" class="container-fluid text-white">
-        <h1 class="title font-weight-bold">
-            <span>Атрибутика</span>
-            <hr>
-        </h1>
-        <attrib :slots="slots"></attrib>
-    </div>
+    <!--Нижняя панель-->
 
     <div class="container-fluid bg-dark">
         <div class="text-white font">
@@ -39,8 +49,6 @@
         </div>
     </div>
 
-
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

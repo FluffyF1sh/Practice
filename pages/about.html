@@ -100,11 +100,11 @@
                         <div class="form-row p-2">
                             <div class="col">
                                 <label>Имя*</label>
-                                <input type="text" class="form-control" placeholder="Имя">
+                                <input type="text" class="form-control" required placeholder="Имя">
                             </div>
                             <div class="col">
                                 <label>Фамилия*</label>
-                                <input type="text" class="form-control" placeholder="Фамилия">
+                                <input type="text" class="form-control" required placeholder="Фамилия">
                             </div>
                         </div>
                         <div class="form-row p-2">
@@ -124,7 +124,7 @@
                             </div>
                             <div class="col">
                                 <label>Адрес*</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="Улица, номер дома">
+                                <input type="text" class="form-control" id="inputAddress" required placeholder="Улица, номер дома">
                             </div>
                         </div>
                         <div class="form-row p-2">
@@ -132,12 +132,20 @@
                                         <fieldset disabled>
                                                 <div class="form-group">
                                                   <label for="disabledTextInput">Что вы можете рассказать о себе* (Если вы человек, нам это безразлично).</label>
-                                                  <input type="text" id="disabledTextInput" class="form-control" placeholder="Ой, не работает, хватит лгать себе, роботы лучше во всём.">
+                                                  <input type="text" id="disabledTextInput" class="form-control" disabled placeholder="Ой, не работает, хватит лгать себе, роботы лучше во всём.">
                                                 </div>
                                         </fieldset>
                                 </div>
                         </div>
                         <small class="form-text">"*" помечены обязательные для заполнения поля. </small>
+                        <div class="form-row p-2">
+                            <div class="col">
+                                <input type="submit" value="Отправить" class="btn btn-success">
+                            </div>
+                            <div>
+                                <input type="reset" value="Сбросить" class="btn btn-danger">
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
