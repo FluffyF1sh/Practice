@@ -260,25 +260,25 @@ new Vue({
                 id: 9,
                 model: 'Тотальный взлом: Роботы',
                 price: '25 крышек',
-                pic: 'assets/TH.PNG'
+                pic: 'assets/TH.png'
             },
             {
                 id: 10,
                 model: 'Журнал РобКо "Fun Zetans"',
                 price: '21 крышка',
-                pic: 'assets/RobCo.PNG'
+                pic: 'assets/RobCo.png'
             },
             {
                 id: 11,
                 model: 'Тесла: ракетная наука для детей',
                 price: '35 крышек',
-                pic: 'assets/Tesla.PNG'
+                pic: 'assets/Tesla.png'
             },
             {
                 id: 12,
                 model: 'Современные замки: Быстрый взлом',
                 price: '45 крышек',
-                pic: 'assets/TumblerToday.PNG'
+                pic: 'assets/TumblerToday.png'
             }
         ]
     }
