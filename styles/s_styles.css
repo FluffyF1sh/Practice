@@ -48,9 +48,15 @@
 .title{
     text-shadow: black 0.1em 0.1em ;
 }
+.simage{
+    max-width: 25%;
+}
+.rob{
+    width: 100%;
+}
 @media(max-width:768px){
     .content{
-        margin-top: 10vw;
+        margin-top: 20vw;
     }
     .font{
         font-size: 4vw;
@@ -71,10 +77,19 @@
         font-size: 4.5vw;  
         text-shadow: 0.02em 0.02em black; 
     }
+    .rob{
+        width: 100%;
+    }
+    .simage{
+        max-width: 100%;
+    }
 }
 @media(min-width: 768px) and (max-width:1024px){
     .content{
         margin-top: 20vw;
+    }
+    .rob{
+        width: 25%;
     }
     .fs{
         margin: auto 1vw;
@@ -97,5 +112,8 @@
     .title{
         font-size: 8vw;
         text-shadow: black 0.1em 0.1em ;
+    }
+    .simage{
+        max-width: 50%;
     }
 }

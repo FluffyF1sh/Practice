@@ -97,11 +97,11 @@ new Vue({
 Vue.component('NewsBar', {
     props: ['posts'],
     template: '\
-    <div class="container-fluid font">\
+<div class="container-fluid font">\
     <div v-for="post in posts" :key="post.id" :post="post">\
     <div class="row">\
-        <div class="col-md"></div>\
-        <div class="col col-md-8">\
+        <div class="col-lg"></div>\
+        <div class="col col-lg-8">\
             <h2 class="text-center bg-dark font-weight-bold">{{post.header}}</h2>\
             <div class="col-md-4"><img class="mw-100 float-left mr-4 mb-2" :src="post.url"></div>\
             <h3>{{post.poster}}</h3>\
@@ -109,42 +109,22 @@ Vue.component('NewsBar', {
                 {{post.textUp}}\
             </p>\
         </div>\
-        <div class="col-md"></div>\
+        <div class="col-lg"></div>\
     </div>\
     <div class="row">\
-        <div class="col-md"></div>\
-        <div class="col col-md-8">\
+        <div class="col-lg"></div>\
+        <div class="col col-lg-8">\
             <p class="text-justify">\
                 {{post.textDown}}}\
                         <div class="container-fluid border border-dark">\
-                            <div class="row m-1">\
-                                <div class="col m-1 ">\
-                                    <div class="text-center font-weight-bold">Eugene 9.12.2024</div>\
-                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div>Как круто, что всё роботизируют! Жду, когда смогу отдать своего протекрона на работу\
-                                    к вам.\
-                                </div>\
-                                <div class="col m-1">\
-                                    <div class="text-center font-weight-bold">Robert 11.12.2024</div>\
-                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> Скоро обычным людям места не останется в этом мире...\
-                                </div>\
-                            </div>\
-                            <div class="row m-1">\
-                                <div class="col m-1">\
-                                    <div class="text-center font-weight-bold">Boosher232 01.01.2025</div>\
-                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> С Новым годом!!!\
-                                </div>\
-                                <div class="col m-1">\
-                                    <div class="text-center font-weight-bold">???????? 22.02.2024</div>\
-                                    <div class="col-md-3"><img class="mw-100 float-left pr-1" src="../assets/profile_pic.jpg"></div> djlfh;asl lsl.. OS>?\
-                                </div>\
-                            </div>\
+                        <h2>Оставьте ваш комментарий!</h2>\
                             <form>\
-                                <div class="row form-row">\
-                                    <div class="col form-group">\
+                                <div class="form-row">\
+                                    <div class="col-md form-group">\
                                         <label>Ваш e-mail</label>\
                                         <input type="email" class="form-control" id="colFormLabel" placeholder="example@mailbox.dom" required>\
                                     </div>\
-                                    <div class="col form-group">\
+                                    <div class="col-md form-group">\
                                         <label>Ваш никнейм</label>\
                                         <input type="username" class="form-control" id="colFormLabel" placeholder="username" required>\
                                     </div>\
@@ -167,7 +147,7 @@ Vue.component('NewsBar', {
                     </div>\
             </p>\
         </div>\
-        <div class="col-md"></div>\
+        <div class="col-lg"></div>\
     </div>\
     </div>\
 </div>'

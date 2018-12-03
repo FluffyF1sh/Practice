@@ -58,7 +58,7 @@ Vue.component('parm', {
                         <div>{{armor.model}}</div>\
                         <div>Цена: {{armor.price}}</div>\
                     </div>\
-                    <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                    <a class="btn btn-light text-dark px-2" role="button" aria-pressed="true" href="pages/shop_item.html">Страница товара</a>\
                     <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
     </div>\
@@ -69,7 +69,7 @@ Vue.component('parm', {
                     <div>{{armor.model}}</div>\
                     <div>Цена: {{armor.price}}</div>\
                 </div>\
-            <button type="button" class="btn btn-light px-2">Страница товара</button>\
+            <a class="btn btn-light text-dark px-2" role="button" aria-pressed="true" href="pages/shop_item.html">Страница товара</a>\
             <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
     </div>\
@@ -80,7 +80,7 @@ Vue.component('parm', {
                     <div>{{armor.model}}</div>\
                     <div>Цена: {{armor.price}}</div>\
                 </div>\
-            <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                <a class="btn btn-light text-dark px-2" role="button" aria-pressed="true" href="pages/shop_item.html">Страница товара</a>\
             <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
     </div>\
@@ -176,7 +176,7 @@ Vue.component('attrib', {
                         <div>{{slot.model}}</div>\
                         <div>Цена: {{slot.price}}</div>\
                     </div>\
-                    <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                    <a class="btn btn-light text-dark px-2" role="button" aria-pressed="true" href="pages/shop_item.html">Страница товара</a>\
                     <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
         </div>\
@@ -187,7 +187,7 @@ Vue.component('attrib', {
                     <div>{{slot.model}}</div>\
                     <div>Цена: {{slot.price}}</div>\
                 </div>\
-                <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                <a class="btn btn-light text-dark px-2" role="button" aria-pressed="true" href="pages/shop_item.html">Страница товара</a>\
                 <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
         </div>\
@@ -198,7 +198,7 @@ Vue.component('attrib', {
                     <div>{{slot.model}}</div>\
                     <div>Цена: {{slot.price}}</div>\
                 </div>\
-                <button type="button" class="btn btn-light px-2">Страница товара</button>\
+                <a class="btn btn-light text-dark px-2" role="button" aria-pressed="true" href="pages/shop_item.html">Страница товара</a>\
                 <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
             </div>\
         </div>\
