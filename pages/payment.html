@@ -15,8 +15,14 @@
 <body class="back">
     <nav-bar id="nav" :logo="logo" :refs="refs" :cart="cart"></nav-bar>
 
-    <News-Bar id="posts" :posts="posts" class="content"></News-Bar>
-
+    <div class="container-fluid content font">
+        <div class="row">
+            <div class="col-lg"></div>
+            <div class="col-lg-8"></div>                
+            <div class="col-lg"></div>
+        </div>
+    </div>
+    
     <div class="container-fluid bg-dark">
         <div class="text-white font">
             <Foot-Bar id="foot" :desc="desc" :teller="teller" :logos="logos"></Foot-Bar>
@@ -31,7 +37,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="../scripts/vue-bars.js"></script>
-    <script src="../scripts/vue-news.js"></script>
-</body>
-
-</html>
+    <script src="../scripts/vue-cart.js"></script>
+    </body>
+    
+    </html>

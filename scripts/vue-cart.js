@@ -1,21 +1,18 @@
-Vue.component('parm', {
+Vue.component('cart', {
     props: ['armors'],
-    template: '<div>\
-    <div  class="row text-center font-weight-bold font">\
-            <div v-for="armor in armors.slice(0,4)" class="col-md m-3 p-4 m-md-4 pt-md-3 rounded border border-light bg-dark">\
-                <img class="mw-100 rounded bg-light" :src="armor.pic">\
-                    <div>\
-                        <div>{{armor.model}}</div>\
-                        <div>Цена: {{armor.price}}</div>\
-                    </div>\
-                    <a class="btn btn-light text-dark px-2" role="button" aria-pressed="true" href="pages/shop_item.html">Страница товара</a>\
-                    <button type="button" class="btn btn-success px-2">Добавить в корзину</button>\
-            </div>\
+    template: '\
+    <div>\
+        <div v-for="armor in armors" class="row m-2">\
+            <div class="col"><img class="bg-light rounded border border-dark simage" :src="armor.pic"></div>\
+            <div class="col">{{armor.model}}</div>\
+            <div class="col"><input placeholder="1" class="w-25 d-sm-none d-md-none d-lg-inline" type="number"></div>\
+            <div class="col">{{armor.price}}</div>\
+        </div>\
     </div>'
 })
 
 new Vue({
-    el: '#parm',
+    el: '#cart',
     data: {
         armors: [
             {
