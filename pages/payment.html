@@ -18,17 +18,107 @@
     <div class="container-fluid content font">
         <div class="row">
             <div class="col-lg"></div>
-            <div class="col-lg-8"></div>                
+            <div class="col-lg-8">
+                <h1>Оплата и доставка</h1>
+                <form>
+                    <div class="row">
+                        <div class="col-md">
+                            <div>
+                                Ваше Фамилия, имя и отчество:
+                                <input class="form-control" type="text" placeholder="Фамилия Имя Отчество">
+                            </div>
+                            <div>
+                                Ваш e-mail:
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            </div>
+                            <div>
+                                Ваш адрес:
+                                <input class="form-control" type="text" placeholder="Город, улица, дом">
+                            </div>
+                            <div>
+                                Номер телефона:
+                                <input class="form-control" type="tel" maxlength="11" pattern="[0-9]{11}" placeholder="X-XXX-XXX-XX-XX">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div>
+                                Номер кредитной карты:
+                                <input class="form-control" type="tel" maxlength="16" pattern="[0-9]{16}" placeholder="0000 0000 0000 0000">
+                            </div>
+                            Срок действия карты
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-control" name="MM">
+                                        <option value="01" selected>01 Январь</option>
+                                        <option value="02">02 Февраль</option>
+                                        <option value="03">03 Март</option>
+                                        <option value="04">04 Апрель</option>
+                                        <option value="05">05 Май</option>
+                                        <option value="06">06 Июнь</option>
+                                        <option value="07">07 Июль</option>
+                                        <option value="08">08 Август</option>
+                                        <option value="09">09 Сентябрь</option>
+                                        <option value="10">10 Октябрь</option>
+                                        <option value="11">11 Ноябрь</option>
+                                        <option value="12">12 Декабрь</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-control" name="YYYY">
+                                        <option value="2018" selected>2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                CVC/CVV код:
+                                <input class="form-control" type="tel" maxlength="3" pattern="[0-9]{3}" placeholder="ХХХ">
+                            </div>
+                            <div>
+                                Валюта
+                                <select class="form-control" name="currency">
+                                    <option value="2018" selected>RUB</option>
+                                    <option value="2019">USD</option>
+                                    <option value="2020">EUR</option>
+                                    <option value="2021">GBP</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            Доставка
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Самовывоз (бесплатно)</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Курьерская доставка (150 руб)</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Почта России (350 руб)</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">Транспортная компания (1450 руб)</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row m-4">
+                        <button type="button" class="btn btn-success">Оплатить</button>
+                    </div>
+                </form>
+            </div>
             <div class="col-lg"></div>
         </div>
     </div>
-    
-    <div class="container-fluid bg-dark">
-        <div class="text-white font">
-            <Foot-Bar id="foot" :desc="desc" :teller="teller" :logos="logos"></Foot-Bar>
-        </div>
-    </div>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -38,6 +128,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="../scripts/vue-bars.js"></script>
     <script src="../scripts/vue-cart.js"></script>
-    </body>
-    
-    </html>
+</body>
+
+</html>
