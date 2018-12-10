@@ -37,14 +37,14 @@ Vue.component('NavBar', {
 new Vue({
     el: '#nav',
     data: {
-        logo: { img: '../assets/hlogo.png', url: '../index.html', text: 'West-Tek power armor' },
+        logo: { img: 'assets/hlogo.png', url: 'index.html', text: 'West-Tek power armor' },
         refs: [
-            { id: 1, url: '../index.html', text: 'Магазин' },
-            { id: 2, url: '../pages/news.html', text: 'Новости' },
-            { id: 3, url: '../pages/about.html', text: 'О компании' },
+            { id: 1, url: 'index.html', text: 'Магазин' },
+            { id: 2, url: 'pages/news.html', text: 'Новости' },
+            { id: 3, url: 'pages/about.html', text: 'О компании' },
             { id: 4, url: 'https://mamaikan.github.io/Nuka-Cola/index.html', text: 'Nuka-Cola' },
         ],
-        cart: { url: '../pages/cart.html', text: 'Корзина' }
+        cart: { url: 'pages/cart.html', text: 'Корзина' }
     }
 })
 
