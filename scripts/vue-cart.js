@@ -5,7 +5,7 @@ Vue.component('cart', {
         <div v-for="armor in armors" class="row m-2">\
             <div class="col"><img class="bg-light rounded border border-dark simage" :src="armor.pic"></div>\
             <div class="col">{{armor.model}}</div>\
-            <div class="col"><input placeholder="1" class="w-25 d-sm-none d-md-none d-lg-inline" type="number"></div>\
+            <div class="col"><input placeholder="1" class="w-25 d-none d-md-none d-lg-inline" type="number"></div>\
             <div class="col">{{armor.price}}</div>\
         </div>\
     </div>'
